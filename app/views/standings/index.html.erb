@@ -1,0 +1,19 @@
+<div class="table-title">
+<h3>Wild Card Standings</h3>
+</div>
+<table class="table-fill">
+<thead>
+<tr>
+<th class="text-left">Team</th>
+<th class="text-left">Games Behind</th>
+</tr>
+</thead>
+<tbody class="table-hover">
+<tr>
+<% Team.sort_by_wins.each do |team| %>
+<td class="text-left"><%= team.name %></td>
+<td class="text-left"><%= team.games_behind %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
