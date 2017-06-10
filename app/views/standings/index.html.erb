@@ -1,11 +1,14 @@
 <div class="table-title">
 <h3>Wild Card Standings</h3>
 </div>
+
 <table class="table-fill">
 <thead>
 <tr>
 <th class="text-left">Team</th>
 <th class="text-left">Games Behind</th>
+<th class="text-left">Division</th>
+<th class="text-left">Rank</th>
 </tr>
 </thead>
 <tbody class="table-hover">
@@ -13,6 +16,8 @@
 <% Team.sort_by_wins.each do |team| %>
 <td class="text-left"><%= team.name %></td>
 <td class="text-left"><%= team.games_behind %></td>
+<td class="text-left"><%= team.division %></td>
+<th class="text-left"><%= team.rank %></th>
 </tr>
 <% end %>
 </tbody>

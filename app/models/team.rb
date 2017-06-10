@@ -1,5 +1,5 @@
 class Team
-  attr_accessor :name, :record
+  attr_accessor :name, :record, :division, :rank
 
   def adjusted_wins
     array = self.record.split("-").map(&:to_f)
@@ -7,10 +7,16 @@ class Team
     wins
   end
 
-  def self.sort_by_wins
+  def self.retrieve_teams
     @teams = Scraper.scrape_yahoo
+    return @teams
+  end
+
+  def self.sort_by_wins
+    @teams = Team.retrieve_teams
     @teams.sort! { |a, b| b.adjusted_wins <=> a.adjusted_wins}
   end
+
 
   def self.first_place
     self.sort_by_wins.first
