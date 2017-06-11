@@ -8,7 +8,9 @@ class Scraper
     doc.css("tr.Linkable").each do |item|
       array << item
     end
-    print array[0]
+    array.delete_at(0)
+    array.delete_at(3)
+    array.delete_at(6)
     array[0..3].each do |manager|
       team = Team.new
       team.name = manager.css("a[class='Grid-u F-reset Ell Mawpx-250']").text

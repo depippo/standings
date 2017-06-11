@@ -7,6 +7,8 @@ class Team
     wins
   end
 
+
+
   def self.retrieve_teams
     @teams = Scraper.scrape_yahoo
     return @teams
@@ -18,12 +20,12 @@ class Team
   end
 
 
-  def self.first_place
-    self.sort_by_wins.first
+  def self.third_place
+    self.sort_by_wins.third
   end
 
   def games_behind
-    Team.first_place.adjusted_wins - self.adjusted_wins
+    Team.third_place.adjusted_wins - self.adjusted_wins
   end
 
   def self.sort_by_games_behind

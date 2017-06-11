@@ -150,6 +150,11 @@ td.text-left {
   text-align: left;
 }
 
+td.text-left-highlight {
+  text-align: left;
+  color: red;
+}
+
 td.text-center {
   text-align: center;
 }
