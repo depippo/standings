@@ -1,4 +1,4 @@
-class Team
+class Leader
   attr_accessor :name, :record, :division, :rank
 
   def adjusted_wins
@@ -7,14 +7,14 @@ class Team
     wins
   end
 
-  def self.retrieve_teams
-    @teams = Scraper.scrape_yahoo
-    return @teams
-  end
+  # def self.retrieve_leaders
+  #   @teams = Scraper.scrape_yahoo
+  #   return @teams
+  # end
 
   def self.sort_by_wins
-    @teams = Team.retrieve_teams
-    @teams.sort! { |a, b| b.adjusted_wins <=> a.adjusted_wins}
+    @leader = Leader.show_leaders
+    @leaders.sort! { |a, b| b.adjusted_wins <=> a.adjusted_wins}
   end
 
 
@@ -31,22 +31,26 @@ class Team
   end
 
   def self.sort_by_games_behind
-    @teams = Team.sort_by_wins
-    @teams.each.with_index(1) do |team, i|
+    @leaders = Leader.show_leaders
+    @leaders.each.with_index(1) do |team, i|
       puts "#{i}. #{team.name} - #{team.games_behind} GB"
     end
   end
 
-  def self.four_seed
-    self.sort_by_wins[0]
+  def self.show_leaders
+    @leaders = Scraper.retrieve_leaders
   end
 
-  def self.five_seed
-    self.sort_by_wins[1]
+  def self.one_seed
+    Leader.sort_by_wins[0]
   end
 
-  def self.six_seed
-    self.sort_by_wins[2]
+  def self.two_seed
+    Leader.sort_by_wins[1]
+  end
+
+  def self.three_seed
+    Leader.sort_by_wins[2]
   end
 
  end
