@@ -1,5 +1,5 @@
 <div class="table-title">
-<h3>Wild Card Standings</h3>
+<h3>2017 WILD CARD STANDINGS</h3>
 </div>
 
 <table class="table-fill">
@@ -7,24 +7,29 @@
 <tr>
 <th class="text-left">Team</th>
 <th class="text-left">Games Behind</th>
-<th class="text-left">Division</th>
-<th class="text-left">Rank</th>
+<th class="text-left">Record</th>
+<th class="text-left">Playoff Seed #</th>
 </tr>
 </thead>
 <tbody class="table-hover">
 <tr>
-<% Team.sort_by_wins[0..2].each do |team| %>
+<% Team.sort_by_wins[0..1].each do |team| %>
 <td class="text-left-highlight"><%= team.name %></td>
-<td class="text-left-highlight"><%= team.games_behind %></td>
-<td class="text-left-highlight"><%= team.division %></td>
-<th class="text-left-highlight"><%= team.rank %></th>
+<td class="text-left-highlight">+<%= team.games_ahead %></td>
+<td class="text-left-highlight"><%= team.record %></td>
+<td class="text-left-highlight"><%= team.rank %></td>
 </tr>
 <% end %>
+<td class="text-left-highlight"><%= Team.sort_by_wins[2].name %></td>
+<td class="text-left-highlight"> -- </td>
+<td class="text-left-highlight"><%= Team.sort_by_wins[2].record %></td>
+<td class="text-left-highlight"><%= Team.sort_by_wins[2].rank %></td>
+</tr>
 <% Team.sort_by_wins[3..8].each do |team| %>
 <td class="text-left"><%= team.name %></td>
 <td class="text-left"><%= team.games_behind %></td>
-<td class="text-left"><%= team.division %></td>
-<th class="text-left"><%= team.rank %></th>
+<td class="text-left"><%= team.record %></td>
+<td class="text-left"></td>
 </tr>
 <% end %>
 </tbody>

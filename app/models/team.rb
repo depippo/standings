@@ -28,6 +28,10 @@ class Team
     Team.third_place.adjusted_wins - self.adjusted_wins
   end
 
+  def games_ahead
+    self.adjusted_wins - Team.third_place.adjusted_wins
+  end
+
   def self.sort_by_games_behind
     @teams = Team.sort_by_wins
     @teams.each.with_index(1) do |team, i|
