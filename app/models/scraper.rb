@@ -22,6 +22,11 @@ class Scraper
     array[4..7].each do |manager|
       team = Team.new
       team.name = manager.css("a[class='Grid-u F-reset Ell Mawpx-250']").text
+      if team.name.include?("ð±ð¿ðð¨ð»ð¨ð¿ââï¸ð¦ð»")
+        team.name = "Team Emoji"
+      else
+        team.name.gsub!("ð´", "")
+      end
       team.record = manager.css("td.Nowrap.Ta-c.Px-sm.Tst-wlt").text
       team.rank = manager.css("td.First.Ta-c.Px-sm.Tst-rank.Relative").text
       team.division = "Central"
