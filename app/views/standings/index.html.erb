@@ -7,8 +7,8 @@
     <thead>
       <tr>
         <th class="text-left">Team</th>
-        <th class="text-left">Games Behind</th>
         <th class="text-left">Record</th>
+        <th class="text-left">GB</th>
         <th class="text-left">Seed</th>
       </tr>
     </thead>
@@ -17,20 +17,20 @@
       <tr>
       <% Team.sort_by_wins[0..1].each do |team| %>
         <td class="text-left-highlight"><%= team.name %></td>
-        <td class="text-left-highlight">+<%= team.games_ahead %></td>
         <td class="text-left-highlight"><%= team.record %></td>
+        <td class="text-left-highlight">+<%= team.games_ahead %></td>
         <td class="text-left-highlight"><%= team.rank %></td>
       </tr>
       <% end %>
       <td class="text-left-highlight"><%= Team.sort_by_wins[2].name %></td>
-        <td class="text-left-highlight"> -- </td>
         <td class="text-left-highlight"><%= Team.sort_by_wins[2].record %></td>
+        <td class="text-left-highlight"> -- </td>
         <td class="text-left-highlight"><%= Team.sort_by_wins[2].rank %></td>
       </tr>
       <% Team.sort_by_wins[3..8].each do |team| %>
         <td class="text-left"><%= team.name %></td>
-        <td class="text-left"><%= team.games_behind %></td>
         <td class="text-left"><%= team.record %></td>
+        <td class="text-left"><%= team.games_behind %></td>
         <td class="text-left"></td>
       </tr>
       <% end %>
