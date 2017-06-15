@@ -21,8 +21,8 @@ body {
   font-size: 16px;
   font-weight: 600;
   text-rendering: optimizeLegibility;
-  /*background-image: url(http://media.vocativ.com/photos/2017/05/GettyImages-6898335522281933424.jpg);*/
-  background-repeat: no-repeat;
+  background-image: url(Baseball-iStock_000016018188Medium.jpg);
+  background-repeat: repeat;
   background-position: center top;
 }
 
@@ -37,6 +37,7 @@ div.table-title {
   max-width: 600px;
   text-align: center;
   width: 100%;
+
 }
 
 .table-title h3 {
@@ -45,7 +46,8 @@ div.table-title {
    font-weight: 600;
    font-style:normal;
    font-family: "Roboto", helvetica, arial, sans-serif;
-  text-shadow: 4px 4px 4px rgba(0,0,0,.9);
+    text-shadow: 4px 4px 4px rgba(0,0,0,.9);
+      margin-top: 0;
 }
 
 h4  {
@@ -55,24 +57,6 @@ h4  {
    font-style:normal;
    font-family: "Roboto", helvetica, arial, sans-serif;
   text-shadow: 1px 1px 1px rgba(0,0,0,.9);
-}
-
-.matchups {
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius:3px;
-  border-collapse: collapse;
-  height: 100%;
-  margin: auto;
-  max-width: 600px;
-  padding-:5px;
-  width: 100%;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .5);
-  animation: float 5s infinite;
-  padding:20px;
-  text-align:left;
-  vertical-align:middle;
-  font-weight:300;
-  font-size:14px;
 }
 
 .left {
@@ -232,7 +216,7 @@ td.text-right {
     font-size: 12px;
     font-weight: 400;
     text-rendering: optimizeLegibility;
-    background-image: url(http://media.vocativ.com/photos/2017/05/GettyImages-6898335522281933424.jpg);
+    background-image: url(Baseball-iStock_000016018188Medium.jpg);
     background-repeat: no-repeat;
     background-position: center top;
   }
@@ -416,7 +400,7 @@ td.text-right {
     font-size: 10px;
     font-weight: 400;
     text-rendering: optimizeLegibility;
-    background-image: url(http://media.vocativ.com/photos/2017/05/GettyImages-6898335522281933424.jpg);
+    /*background-image: url(http://media.vocativ.com/photos/2017/05/GettyImages-6898335522281933424.jpg);*/
     background-repeat: no-repeat;
     background-position: center top;
   }
@@ -584,22 +568,31 @@ td.text-right {
 }
 
 .one {
-  width: 30%;
-  border: 1px solid green;
+  width: 40%;
+  padding: 5px;
+  font-weight:400;
+  height: 100%;
+  font-size:16px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .5);
 }
 
 .two {
-  width: 70%;
-  border: 1px solid blue;
+  width: 60%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .wrap {
     flex-direction: column;
   }
   .one,
   .two {
     width: auto;
+  }
+  .one {
+    margin-top: 10px;
+    font-weight:300;
+    font-size:12px;
   }
 }
 

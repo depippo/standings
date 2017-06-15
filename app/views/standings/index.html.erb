@@ -1,7 +1,7 @@
+<div class="table-title">
+  <h3>2017 WILD CARD STANDINGS</h3>
+</div>
 
-  <div class="table-title">
-    <h3>2017 WILD CARD STANDINGS</h3>
-  </div>
 
 <div class="wrap">
   <div class="two">
@@ -40,10 +40,14 @@
     </table>
   </div>
   <div class="one">
-    Projected first round playoff matchups:
-    <%= Leader.three_seed.name %> vs. <%= Team.six_seed.name %> <br>
-    <%= Team.four_seed.name %> vs. <%= Team.five_seed.name %> <br>
-    <%= Leader.one_seed.name %> Bye <br>
-    <%= Leader.two_seed.name %> Bye <br>
+    <div class="onebox">
+      <span>Projected first round playoff matchups:</span><br>
+      <br>
+      <span><%= Leader.three_seed.name %> (3) vs. <%= Team.six_seed.name %> (6)</span><br>
+      <span><%= Team.four_seed.name %> (4) vs. <%= Team.five_seed.name %> (5)</span><br>
+      <br>
+      <span><%= Leader.one_seed.name %> (1) - Bye</span><br>
+      <span><%= Leader.two_seed.name %> (2) - Bye</span>
+    </div>
   </div>
 </div>
