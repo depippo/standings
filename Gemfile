@@ -7,6 +7,7 @@ gem 'rails', '4.2.6'
 # gem 'sqlite3'
 # gem 'taps'
 gem 'pg'
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 gem 'tilt', '~> 1.4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

@@ -3,37 +3,47 @@
     <h3>2017 WILD CARD STANDINGS</h3>
   </div>
 
-  <table class="table-fill">
-    <thead>
-      <tr>
-        <th class="text-left">Team</th>
-        <th class="text-left">Record</th>
-        <th class="text-left">GB</th>
-        <th class="text-left">Seed</th>
-      </tr>
-    </thead>
-    
-    <tbody class="table-hover">
-      <tr>
-      <% Team.sort_by_wins[0..1].each do |team| %>
-        <td class="text-left-highlight"><%= team.name %></td>
-        <td class="text-left-highlight"><%= team.record %></td>
-        <td class="text-left-highlight">+<%= team.games_ahead %></td>
-        <td class="text-left-highlight"><%= team.rank %></td>
-      </tr>
-      <% end %>
-      <td class="text-left-highlight"><%= Team.sort_by_wins[2].name %></td>
-        <td class="text-left-highlight"><%= Team.sort_by_wins[2].record %></td>
-        <td class="text-left-highlight"> -- </td>
-        <td class="text-left-highlight"><%= Team.sort_by_wins[2].rank %></td>
-      </tr>
-      <% Team.sort_by_wins[3..8].each do |team| %>
-        <td class="text-left"><%= team.name %></td>
-        <td class="text-left"><%= team.record %></td>
-        <td class="text-left"><%= team.games_behind %></td>
-        <td class="text-left"></td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
-
+<div class="wrap">
+  <div class="two">
+    <table class="table-fill">
+      <thead>
+        <tr>
+          <th class="text-left">Team</th>
+          <th class="text-left">Record</th>
+          <th class="text-left">GB</th>
+          <th class="text-left">Seed</th>
+        </tr>
+      </thead>
+      
+      <tbody class="table-hover">
+        <tr>
+        <% Team.sort_by_wins[0..1].each do |team| %>
+          <td class="text-left-highlight"><%= team.name %></td>
+          <td class="text-left-highlight"><%= team.record %></td>
+          <td class="text-left-highlight">+<%= team.games_ahead %></td>
+          <td class="text-left-highlight"><%= team.rank %></td>
+        </tr>
+        <% end %>
+        <td class="text-left-highlight"><%= Team.sort_by_wins[2].name %></td>
+          <td class="text-left-highlight"><%= Team.sort_by_wins[2].record %></td>
+          <td class="text-left-highlight"> -- </td>
+          <td class="text-left-highlight"><%= Team.sort_by_wins[2].rank %></td>
+        </tr>
+        <% Team.sort_by_wins[3..8].each do |team| %>
+          <td class="text-left"><%= team.name %></td>
+          <td class="text-left"><%= team.record %></td>
+          <td class="text-left"><%= team.games_behind %></td>
+          <td class="text-left"></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="one">
+    Projected first round playoff matchups:
+    <%= Leader.three_seed.name %> vs. <%= Team.six_seed.name %> <br>
+    <%= Team.four_seed.name %> vs. <%= Team.five_seed.name %> <br>
+    <%= Leader.one_seed.name %> Bye <br>
+    <%= Leader.two_seed.name %> Bye <br>
+  </div>
+</div>

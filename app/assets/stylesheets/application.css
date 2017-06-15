@@ -14,14 +14,14 @@
  *= require_self
  */
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
-
+@import "bootstrap";
 body {
-  background-color: black;
+  background-color: white;
   font-family: "Roboto", helvetica, arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
   text-rendering: optimizeLegibility;
-  background-image: url(http://media.vocativ.com/photos/2017/05/GettyImages-6898335522281933424.jpg);
+  /*background-image: url(http://media.vocativ.com/photos/2017/05/GettyImages-6898335522281933424.jpg);*/
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -575,6 +575,31 @@ td.text-right {
 
   td.text-right {
     text-align: right;
+  }
+}
+
+
+.wrap {
+  display: flex;
+}
+
+.one {
+  width: 30%;
+  border: 1px solid green;
+}
+
+.two {
+  width: 70%;
+  border: 1px solid blue;
+}
+
+@media (max-width: 767px) {
+  .wrap {
+    flex-direction: column;
+  }
+  .one,
+  .two {
+    width: auto;
   }
 }
 
