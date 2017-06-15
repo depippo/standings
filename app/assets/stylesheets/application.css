@@ -21,7 +21,7 @@ body {
   font-size: 16px;
   font-weight: 600;
   text-rendering: optimizeLegibility;
-  background-image: url(Baseball-iStock_000016018188Medium.jpg);
+  background-image: url("http://i.imgur.com/VKDw5Lr.jpg");
   background-repeat: repeat;
   background-position: center top;
 }
@@ -216,7 +216,7 @@ td.text-right {
     font-size: 12px;
     font-weight: 400;
     text-rendering: optimizeLegibility;
-    background-image: url(Baseball-iStock_000016018188Medium.jpg);
+    background-image: url("http://i.imgur.com/VKDw5Lr.jpg");
     background-repeat: no-repeat;
     background-position: center top;
   }
@@ -400,7 +400,7 @@ td.text-right {
     font-size: 10px;
     font-weight: 400;
     text-rendering: optimizeLegibility;
-    /*background-image: url(http://media.vocativ.com/photos/2017/05/GettyImages-6898335522281933424.jpg);*/
+    background-image: url("http://i.imgur.com/VKDw5Lr.jpg");
     background-repeat: no-repeat;
     background-position: center top;
   }
