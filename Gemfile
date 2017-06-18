@@ -9,6 +9,7 @@ gem 'rails', '4.2.6'
 gem 'pg'
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 gem 'tilt', '~> 1.4.1'
+gem 'rubystats'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

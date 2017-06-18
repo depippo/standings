@@ -51,15 +51,3 @@
     </div>
   </div>
 </div>
-
-<h1> <% Scraper.save_week %>
-</h1>
-
-<h1> <% Challenger.show_challengers.each do |challenger| %>
-  <%= challenger.name %> <br>
-  <%= challenger.adjusted_wins %> <br>
-  <%= challenger.id %> <br>
-  <% end %>
-</h1>
-
-
