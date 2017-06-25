@@ -8,7 +8,7 @@ class Scraper
   def self.scrape_yahoo
     teams = []
     @leaders = []
-    @challengers = []
+    # @challengers = []
     
     array = []
     @doc.css("tr.Linkable").each do |item|
@@ -19,9 +19,9 @@ class Scraper
     save_leaders(array[4])
     save_leaders(array[8])
 
-    save_challengers(array)
+    # save_challengers(array)
 
-    save_week
+    # save_week
 
     array.delete_at(0)
     array.delete_at(3)
@@ -73,41 +73,41 @@ class Scraper
       @leaders << leader
   end
 
-  def self.save_challengers(array)
-    array.each do |manager|
-      challenger = Challenger.new
-      challenger.name = manager.css("a[class='Grid-u F-reset Ell Mawpx-250']").text
-      if challenger.name.include?("ð±ð¿ðð¨ð»ð¨ð¿ââï¸ð¦ð»")
-        challenger.name = "Team Emoji"
-      else
-        challenger.name.gsub!("ð´", "")
-        challenger.name.gsub!("â¨", "")
-      end
-      challenger.record = manager.css("td.Nowrap.Ta-c.Px-sm.Tst-wlt").text
+  # def self.save_challengers(array)
+  #   array.each do |manager|
+  #     challenger = Challenger.new
+  #     challenger.name = manager.css("a[class='Grid-u F-reset Ell Mawpx-250']").text
+  #     if challenger.name.include?("ð±ð¿ðð¨ð»ð¨ð¿ââï¸ð¦ð»")
+  #       challenger.name = "Team Emoji"
+  #     else
+  #       challenger.name.gsub!("ð´", "")
+  #       challenger.name.gsub!("â¨", "")
+  #     end
+  #     challenger.record = manager.css("td.Nowrap.Ta-c.Px-sm.Tst-wlt").text
 
-      h = manager.css('a[href]').each_with_object({}) { |n, h| h[n.text.strip] = n['href'] }
-      raw =  h.values[0]
-      raw_id = raw.gsub!("/b1/10912/", "")
+  #     h = manager.css('a[href]').each_with_object({}) { |n, h| h[n.text.strip] = n['href'] }
+  #     raw =  h.values[0]
+  #     raw_id = raw.gsub!("/b1/10912/", "")
 
-      challenger.id = raw_id.to_i
-      @challengers << challenger
-    end
-  end
+  #     challenger.id = raw_id.to_i
+  #     @challengers << challenger
+  #   end
+  # end
 
-  def self.save_week
-    week = @doc.css("span[class='Inlineblock Va-mid']").text
-    week.gsub!("Week ", "")
-    week.gsub!(" Matchups", "")
-    return week
-  end
+  # def self.save_week
+  #   week = @doc.css("span[class='Inlineblock Va-mid']").text
+  #   week.gsub!("Week ", "")
+  #   week.gsub!(" Matchups", "")
+  #   return week
+  # end
 
   def self.retrieve_leaders
     return @leaders
   end
 
-  def self.retrieve_challengers
-    return @challengers
-  end
+  # def self.retrieve_challengers
+  #   return @challengers
+  # end
 
 end
 
