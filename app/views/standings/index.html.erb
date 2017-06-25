@@ -54,3 +54,8 @@
 
 
 <% Challenger.simulate %>
+
+<% Challenger.sort_by_wins.each do |team| %>
+  <%= team.name %>
+  <%= team.projected_wins %> <br>
+<% end %>

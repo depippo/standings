@@ -1,54 +1,67 @@
 class Challenger
-  attr_accessor :id, :name, :record, :odds, :week, :adjusted_wins
+  attr_accessor :id, :name, :record, :odds, :week, :adjusted_wins, :projected_wins
 
-  @jarjar = Challenger.new
-  @jarjar.name = "Jar Jar Tartare"
-  @jarjar.record =  "89-39-4"
+    @challengers = []
 
-  @gypsy = Challenger.new
-  @gypsy.name = "Gypsy Danger"
-  @gypsy.record =  "59-65-8"
+    @jarjar = Challenger.new
+    @jarjar.name = "Jar Jar Tartare"
+    @jarjar.record =  "89-39-4"
+    @challengers << @jarjar
 
-  @vino = Challenger.new
-  @vino.name = "Vino"
-  @vino.record =  "55-72-5"
+    @gypsy = Challenger.new
+    @gypsy.name = "Gypsy Danger"
+    @gypsy.record =  "59-65-8"
+    @challengers << @gypsy
 
-  @backyard = Challenger.new
-  @backyard.name = "Backyards Loseagains"
-  @backyard.record =  "49-78-5"
+    @vino = Challenger.new
+    @vino.name = "Vino"
+    @vino.record =  "55-72-5"
+    @challengers << @vino
 
-  @miggy = Challenger.new
-  @miggy.name = "Miggy Stardust"
-  @miggy.record =  "74-52-6"
+    @backyard = Challenger.new
+    @backyard.name = "Backyards Loseagains"
+    @backyard.record =  "49-78-5"
+    @challengers << @backyard
 
-  @uncle = Challenger.new
-  @uncle.name = "Uncle Charlie"
-  @uncle.record =  "73-53-6"
+    @miggy = Challenger.new
+    @miggy.name = "Miggy Stardust"
+    @miggy.record =  "74-52-6"
+    @challengers << @miggy
 
-  @didi = Challenger.new
-  @didi.name = "Sir Didi's Sleepers"
-  @didi.record =  "51-76-5"
+    @uncle = Challenger.new
+    @uncle.name = "Uncle Charlie"
+    @uncle.record =  "73-53-6"
+    @challengers << @uncle
 
-  @steve = Challenger.new
-  @steve.name = "SOS"
-  @steve.record =  "40-85-7"
+    @didi = Challenger.new
+    @didi.name = "Sir Didi's Sleepers"
+    @didi.record =  "51-76-5"
+    @challengers << @didi
 
-  @theresa = Challenger.new
-  @theresa.name = "Keep it n your pence"
-  @theresa.record =  "79-50-3"
+    @steve = Challenger.new
+    @steve.name = "SOS"
+    @steve.record =  "40-85-7"
+    @challengers << @steve
 
-  @process = Challenger.new
-  @process.name = "Trust The Process"
-  @process.record =  "70-53-9"
+    @theresa = Challenger.new
+    @theresa.name = "Keep it n your pence"
+    @theresa.record =  "79-50-3"
+    @challengers << @theresa
 
-  @kevin = Challenger.new
-  @kevin.name = "Swipe Left"
-  @kevin.record =  "61-66-5"
+    @process = Challenger.new
+    @process.name = "Trust The Process"
+    @process.record =  "70-53-9"
+    @challengers << @process
 
-  @dan = Challenger.new
-  @dan.name = "Team Emoji"
-  @dan.record =  "56-67-9"
+    @kevin = Challenger.new
+    @kevin.name = "Swipe Left"
+    @kevin.record =  "61-66-5"
+    @challengers << @kevin
 
+    @dan = Challenger.new
+    @dan.name = "Team Emoji"
+    @dan.record =  "56-67-9"
+    @challengers << @dan
 
   def adjusted_wins
     array = self.record.split("-").map(&:to_f)
@@ -56,54 +69,64 @@ class Challenger
     wins
   end
 
-
   def self.simulate
     self.sim_week11
   end
 
-    def self.sim_week11
+  def self.sim_week11
+    sim = self.simulate_match(@miggy, @steve)
+    new1 = sim[0]
+    new2 = sim[1]
+    puts "matchup 1 results, miggy steve:"
+    @miggy.projected_wins = new1
+    @steve.projected_wins = new2
+    puts @miggy.projected_wins
+    puts @steve.projected_wins
 
-      sim = self.simulate_match(@miggy, @steve)
-      new1 = sim[0]
-      new2 = sim[1]
-      puts "matchup 1 results, miggy steve:"
-      puts new1
-      puts new2
+    sim = self.simulate_match(@jarjar, @vino)
+    new3 = sim[0]
+    new4 = sim[1]
+    puts "matchup 2 results, jarjar vino:"    
+    @jarjar.projected_wins = new3
+    @vino.projected_wins = new4
+    puts @jarjar.projected_wins
+    puts @vino.projected_wins
 
-      sim = self.simulate_match(@jarjar, @vino)
-      new3 = sim[0]
-      new4 = sim[1]
-      puts "matchup 2 results, jarjar vino:"    
-      puts new3
-      puts new4
+    sim = self.simulate_match(@backyard, @gypsy)
+    new5 = sim[0]
+    new6 = sim[1]
+    puts "matchup 3 results, backyard gypsy:"
+    @backyard.projected_wins = new5
+    @gypsy.projected_wins = new6
+    puts @backyard.projected_wins
+    puts @gypsy.projected_wins
 
-      sim = self.simulate_match(@backyard, @gypsy)
-      new5 = sim[0]
-      new6 = sim[1]
-      puts "matchup 3 results, backyard gypsy:"
-      puts new5
-      puts new6
+    sim = self.simulate_match(@process, @kevin)
+    new7 = sim[0]
+    new8 = sim[1]
+    puts "matchup 4 results, process kevin:"
+    @process.projected_wins = new7
+    @kevin.projected_wins = new8
+    puts @process.projected_wins
+    puts @kevin.projected_wins
 
-      sim = self.simulate_match(@process, @kevin)
-      new7 = sim[0]
-      new8 = sim[1]
-      puts "matchup 4 results, process kevin:"
-      puts new7
-      puts new8
+    sim = self.simulate_match(@didi, @uncle)
+    new9 = sim[0]
+    new10 = sim[1]
+    puts "matchup 5 results, didi uncle:"
+    @didi.projected_wins = new9
+    @uncle.projected_wins = new10
+    puts @didi.projected_wins
+    puts @uncle.projected_wins
 
-      sim = self.simulate_match(@didi, @uncle)
-      new9 = sim[0]
-      new10 = sim[1]
-      puts "matchup 5 results, didi uncle:"
-      puts new9
-      puts new10
-
-      sim = self.simulate_match(@dan, @theresa)
-      new11 = sim[0]
-      new12 = sim[1]
-      puts "matchup 6 results, dan theresa:"
-      puts new11
-      puts new12
+    sim = self.simulate_match(@dan, @theresa)
+    new11 = sim[0]
+    new12 = sim[1]
+    puts "matchup 6 results, dan theresa:"
+    @dan.projected_wins = new11
+    @theresa.projected_wins = new12
+    puts @dan.projected_wins
+    puts @theresa.projected_wins
 
   end
 
@@ -121,8 +144,6 @@ class Challenger
     adjusted2 = (team_record2 - 6)
     adjusted2 /= 10
     adjusted2 += 6
-
-    # total_difference = 0
 
     gen1 = Rubystats::NormalDistribution.new(adjusted1, 1)
     team_score1 = gen1.rng               # a single random sample
@@ -155,6 +176,8 @@ class Challenger
     return totals
   end
 
-
+  def self.sort_by_wins
+    @challengers.sort! { |a, b| b.projected_wins <=> a.projected_wins}
+  end
 
  end
