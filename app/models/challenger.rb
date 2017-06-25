@@ -70,6 +70,41 @@ class Challenger
   end
 
   def self.simulate
+    playoffs = []
+    10000.times {
+      self.run_simulation
+      Challenger.sort_by_wins[0..5].each do |team|
+        playoffs << team.name
+      end
+    }
+    jar = (playoffs.count("Jar Jar Tartare").to_f / 10000)
+    theresa = (playoffs.count("Keep it n your pence").to_f / 10000)
+    miggy = (playoffs.count("Miggy Stardust").to_f / 10000)
+    uncle = (playoffs.count("Uncle Charlie").to_f / 10000)
+    process = (playoffs.count("Trust The Process").to_f / 10000)
+    kevin = (playoffs.count("Swipe Left").to_f / 10000)
+    gypsy = (playoffs.count("Gypsy Danger").to_f / 10000)
+    dan = (playoffs.count("Team Emoji").to_f / 10000)
+    vino = (playoffs.count("Vino").to_f / 10000)
+    didi = (playoffs.count("Sir Didi's Sleepers").to_f / 10000)
+    backyard = (playoffs.count("Backyards Loseagains").to_f / 10000)
+    steve = (playoffs.count("SOS").to_f / 10000)
+    puts jar
+    puts theresa
+    puts miggy
+    puts uncle
+    puts process
+    puts kevin
+    puts gypsy
+    puts dan
+    puts vino
+    puts didi
+    puts backyard
+    puts steve
+
+  end
+
+  def self.run_simulation
     self.sim_week12
     self.sim_week13
     self.sim_week14
