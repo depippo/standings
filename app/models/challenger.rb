@@ -555,17 +555,17 @@ class Challenger
     team_record2 = total_2 / weeks_completed
 
     adjusted1 = (team_record1 - 6)
-    adjusted1 /= 25
+    adjusted1 /= 10
     adjusted1 += 6
 
     adjusted2 = (team_record2 - 6)
-    adjusted2 /= 25
+    adjusted2 /= 10
     adjusted2 += 6
 
-    gen1 = Rubystats::NormalDistribution.new(adjusted1, 1)
+    gen1 = Rubystats::NormalDistribution.new(adjusted1, 2)
     team_score1 = gen1.rng               # a single random sample
 
-    gen2 = Rubystats::NormalDistribution.new(adjusted2, 1)
+    gen2 = Rubystats::NormalDistribution.new(adjusted2, 2)
     team_score2 = gen2.rng
 
     dif = team_score1 - team_score2
@@ -601,17 +601,17 @@ class Challenger
     team_record2 = total_2 / 11
 
     adjusted1 = (team_record1 - 6)
-    adjusted1 /= 25
+    adjusted1 /= 10
     adjusted1 += 6
 
     adjusted2 = (team_record2 - 6)
-    adjusted2 /= 25
+    adjusted2 /= 10
     adjusted2 += 6
 
-    gen1 = Rubystats::NormalDistribution.new(adjusted1, 1)
+    gen1 = Rubystats::NormalDistribution.new(adjusted1, 2)
     team_score1 = gen1.rng               # a single random sample
 
-    gen2 = Rubystats::NormalDistribution.new(adjusted2, 1)
+    gen2 = Rubystats::NormalDistribution.new(adjusted2, 2)
     team_score2 = gen2.rng
 
     dif = team_score1 - team_score2
@@ -636,6 +636,7 @@ class Challenger
     totals = []
     totals << total_1
     totals << total_2
+
     return totals
   end
 
