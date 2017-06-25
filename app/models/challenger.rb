@@ -158,37 +158,37 @@ class Challenger
   end
 
   def self.sim_week13
-    sim = self.simulate_from_projected(@miggy, @didi)
+    sim = self.simulate_from_projected(@miggy, @didi, 12)
     new1 = sim[0]
     new2 = sim[1]
     @miggy.projected_wins = new1
     @didi.projected_wins = new2
 
-    sim = self.simulate_from_projected(@jarjar, @gypsy)
+    sim = self.simulate_from_projected(@jarjar, @gypsy, 12)
     new3 = sim[0]
     new4 = sim[1]  
     @jarjar.projected_wins = new3
     @gypsy.projected_wins = new4
 
-    sim = self.simulate_from_projected(@backyard, @vino)
+    sim = self.simulate_from_projected(@backyard, @vino, 12)
     new5 = sim[0]
     new6 = sim[1]
     @backyard.projected_wins = new5
     @vino.projected_wins = new6
 
-    sim = self.simulate_from_projected(@process, @theresa)
+    sim = self.simulate_from_projected(@process, @theresa, 12)
     new7 = sim[0]
     new8 = sim[1]
     @process.projected_wins = new7
     @theresa.projected_wins = new8
 
-    sim = self.simulate_from_projected(@steve, @uncle)
+    sim = self.simulate_from_projected(@steve, @uncle, 12)
     new9 = sim[0]
     new10 = sim[1]
     @steve.projected_wins = new9
     @uncle.projected_wins = new10
 
-    sim = self.simulate_from_projected(@dan, @kevin)
+    sim = self.simulate_from_projected(@dan, @kevin, 12)
     new11 = sim[0]
     new12 = sim[1]
     @dan.projected_wins = new11
@@ -197,37 +197,37 @@ class Challenger
   end
 
   def self.sim_week14
-    sim = self.simulate_from_projected(@miggy, @uncle)
+    sim = self.simulate_from_projected(@miggy, @uncle, 13)
     new1 = sim[0]
     new2 = sim[1]
     @miggy.projected_wins = new1
     @uncle.projected_wins = new2
 
-    sim = self.simulate_from_projected(@jarjar, @backyard)
+    sim = self.simulate_from_projected(@jarjar, @backyard, 13)
     new3 = sim[0]
     new4 = sim[1]  
     @jarjar.projected_wins = new3
     @backyard.projected_wins = new4
 
-    sim = self.simulate_from_projected(@gypsy, @vino)
+    sim = self.simulate_from_projected(@gypsy, @vino, 13)
     new5 = sim[0]
     new6 = sim[1]
     @gypsy.projected_wins = new5
     @vino.projected_wins = new6
 
-    sim = self.simulate_from_projected(@process, @dan)
+    sim = self.simulate_from_projected(@process, @dan, 13)
     new7 = sim[0]
     new8 = sim[1]
     @process.projected_wins = new7
     @dan.projected_wins = new8
 
-    sim = self.simulate_from_projected(@steve, @didi)
+    sim = self.simulate_from_projected(@steve, @didi, 13)
     new9 = sim[0]
     new10 = sim[1]
     @steve.projected_wins = new9
     @didi.projected_wins = new10
 
-    sim = self.simulate_from_projected(@theresa, @kevin)
+    sim = self.simulate_from_projected(@theresa, @kevin, 13)
     new11 = sim[0]
     new12 = sim[1]
     @theresa.projected_wins = new11
@@ -236,37 +236,37 @@ class Challenger
   end
 
   def self.sim_week15
-    sim = self.simulate_from_projected(@miggy, @jarjar)
+    sim = self.simulate_from_projected(@miggy, @jarjar, 14)
     new1 = sim[0]
     new2 = sim[1]
     @miggy.projected_wins = new1
     @jarjar.projected_wins = new2
 
-    sim = self.simulate_from_projected(@kevin, @gypsy)
+    sim = self.simulate_from_projected(@kevin, @gypsy, 14)
     new3 = sim[0]
     new4 = sim[1]  
     @kevin.projected_wins = new3
     @gypsy.projected_wins = new4
 
-    sim = self.simulate_from_projected(@backyard, @uncle)
+    sim = self.simulate_from_projected(@backyard, @uncle, 14)
     new5 = sim[0]
     new6 = sim[1]
     @backyard.projected_wins = new5
     @uncle.projected_wins = new6
 
-    sim = self.simulate_from_projected(@process, @steve)
+    sim = self.simulate_from_projected(@process, @steve, 14)
     new7 = sim[0]
     new8 = sim[1]
     @process.projected_wins = new7
     @steve.projected_wins = new8
 
-    sim = self.simulate_from_projected(@theresa, @didi)
+    sim = self.simulate_from_projected(@theresa, @didi, 14)
     new9 = sim[0]
     new10 = sim[1]
     @theresa.projected_wins = new9
     @didi.projected_wins = new10
 
-    sim = self.simulate_from_projected(@dan, @vino)
+    sim = self.simulate_from_projected(@dan, @vino, 14)
     new11 = sim[0]
     new12 = sim[1]
     @dan.projected_wins = new11
@@ -275,37 +275,37 @@ class Challenger
   end
 
   def self.sim_week16
-    sim = self.simulate_from_projected(@miggy, @gypsy)
+    sim = self.simulate_from_projected(@miggy, @gypsy, 15)
     new1 = sim[0]
     new2 = sim[1]
     @miggy.projected_wins = new1
     @gypsy.projected_wins = new2
 
-    sim = self.simulate_from_projected(@jarjar, @theresa)
+    sim = self.simulate_from_projected(@jarjar, @theresa, 15)
     new3 = sim[0]
     new4 = sim[1]  
     @jarjar.projected_wins = new3
     @theresa.projected_wins = new4
 
-    sim = self.simulate_from_projected(@backyard, @steve)
+    sim = self.simulate_from_projected(@backyard, @steve, 15)
     new5 = sim[0]
     new6 = sim[1]
     @backyard.projected_wins = new5
     @steve.projected_wins = new6
 
-    sim = self.simulate_from_projected(@process, @vino)
+    sim = self.simulate_from_projected(@process, @vino, 15)
     new7 = sim[0]
     new8 = sim[1]
     @process.projected_wins = new7
     @vino.projected_wins = new8
 
-    sim = self.simulate_from_projected(@kevin, @uncle)
+    sim = self.simulate_from_projected(@kevin, @uncle, 15)
     new9 = sim[0]
     new10 = sim[1]
     @kevin.projected_wins = new9
     @uncle.projected_wins = new10
 
-    sim = self.simulate_from_projected(@dan, @didi)
+    sim = self.simulate_from_projected(@dan, @didi, 15)
     new11 = sim[0]
     new12 = sim[1]
     @dan.projected_wins = new11
@@ -314,37 +314,37 @@ class Challenger
   end
 
   def self.sim_week17
-    sim = self.simulate_from_projected(@miggy, @dan)
+    sim = self.simulate_from_projected(@miggy, @dan, 16)
     new1 = sim[0]
     new2 = sim[1]
     @miggy.projected_wins = new1
     @dan.projected_wins = new2
 
-    sim = self.simulate_from_projected(@jarjar, @uncle)
+    sim = self.simulate_from_projected(@jarjar, @uncle, 16)
     new3 = sim[0]
     new4 = sim[1]  
     @jarjar.projected_wins = new3
     @uncle.projected_wins = new4
 
-    sim = self.simulate_from_projected(@backyard, @process)
+    sim = self.simulate_from_projected(@backyard, @process, 16)
     new5 = sim[0]
     new6 = sim[1]
     @backyard.projected_wins = new5
     @process.projected_wins = new6
 
-    sim = self.simulate_from_projected(@theresa, @vino)
+    sim = self.simulate_from_projected(@theresa, @vino, 16)
     new7 = sim[0]
     new8 = sim[1]
     @theresa.projected_wins = new7
     @vino.projected_wins = new8
 
-    sim = self.simulate_from_projected(@kevin, @didi)
+    sim = self.simulate_from_projected(@kevin, @didi, 16)
     new9 = sim[0]
     new10 = sim[1]
     @kevin.projected_wins = new9
     @didi.projected_wins = new10
 
-    sim = self.simulate_from_projected(@steve, @gypsy)
+    sim = self.simulate_from_projected(@steve, @gypsy, 16)
     new11 = sim[0]
     new12 = sim[1]
     @steve.projected_wins = new11
@@ -353,37 +353,37 @@ class Challenger
   end
 
   def self.sim_week18
-    sim = self.simulate_from_projected(@miggy, @process)
+    sim = self.simulate_from_projected(@miggy, @process, 17)
     new1 = sim[0]
     new2 = sim[1]
     @miggy.projected_wins = new1
     @process.projected_wins = new2
 
-    sim = self.simulate_from_projected(@jarjar, @didi)
+    sim = self.simulate_from_projected(@jarjar, @didi, 17)
     new3 = sim[0]
     new4 = sim[1]  
     @jarjar.projected_wins = new3
     @didi.projected_wins = new4
 
-    sim = self.simulate_from_projected(@backyard, @kevin)
+    sim = self.simulate_from_projected(@backyard, @kevin, 17)
     new5 = sim[0]
     new6 = sim[1]
     @backyard.projected_wins = new5
     @kevin.projected_wins = new6
 
-    sim = self.simulate_from_projected(@steve, @vino)
+    sim = self.simulate_from_projected(@steve, @vino, 17)
     new7 = sim[0]
     new8 = sim[1]
     @steve.projected_wins = new7
     @vino.projected_wins = new8
 
-    sim = self.simulate_from_projected(@theresa, @uncle)
+    sim = self.simulate_from_projected(@theresa, @uncle, 17)
     new9 = sim[0]
     new10 = sim[1]
     @theresa.projected_wins = new9
     @uncle.projected_wins = new10
 
-    sim = self.simulate_from_projected(@dan, @gypsy)
+    sim = self.simulate_from_projected(@dan, @gypsy, 17)
     new11 = sim[0]
     new12 = sim[1]
     @dan.projected_wins = new11
@@ -392,37 +392,37 @@ class Challenger
   end
 
   def self.sim_week19
-    sim = self.simulate_from_projected(@miggy, @vino)
+    sim = self.simulate_from_projected(@miggy, @vino, 18)
     new1 = sim[0]
     new2 = sim[1]
     @miggy.projected_wins = new1
     @vino.projected_wins = new2
 
-    sim = self.simulate_from_projected(@jarjar, @kevin)
+    sim = self.simulate_from_projected(@jarjar, @kevin, 18)
     new3 = sim[0]
     new4 = sim[1]  
     @jarjar.projected_wins = new3
     @kevin.projected_wins = new4
 
-    sim = self.simulate_from_projected(@backyard, @theresa)
+    sim = self.simulate_from_projected(@backyard, @theresa, 18)
     new5 = sim[0]
     new6 = sim[1]
     @backyard.projected_wins = new5
     @theresa.projected_wins = new6
 
-    sim = self.simulate_from_projected(@process, @uncle)
+    sim = self.simulate_from_projected(@process, @uncle, 18)
     new7 = sim[0]
     new8 = sim[1]
     @process.projected_wins = new7
     @uncle.projected_wins = new8
 
-    sim = self.simulate_from_projected(@steve, @dan)
+    sim = self.simulate_from_projected(@steve, @dan, 18)
     new9 = sim[0]
     new10 = sim[1]
     @steve.projected_wins = new9
     @dan.projected_wins = new10
 
-    sim = self.simulate_from_projected(@gypsy, @didi)
+    sim = self.simulate_from_projected(@gypsy, @didi, 18)
     new11 = sim[0]
     new12 = sim[1]
     @gypsy.projected_wins = new11
@@ -431,37 +431,37 @@ class Challenger
   end
 
   def self.sim_week20
-    sim = self.simulate_from_projected(@miggy, @uncle)
+    sim = self.simulate_from_projected(@miggy, @uncle, 19)
     new1 = sim[0]
     new2 = sim[1]
     @miggy.projected_wins = new1
     @uncle.projected_wins = new2
 
-    sim = self.simulate_from_projected(@jarjar, @backyard)
+    sim = self.simulate_from_projected(@jarjar, @backyard, 19)
     new3 = sim[0]
     new4 = sim[1]  
     @jarjar.projected_wins = new3
     @backyard.projected_wins = new4
 
-    sim = self.simulate_from_projected(@didi, @steve)
+    sim = self.simulate_from_projected(@didi, @steve, 19)
     new5 = sim[0]
     new6 = sim[1]
     @didi.projected_wins = new5
     @steve.projected_wins = new6
 
-    sim = self.simulate_from_projected(@process, @dan)
+    sim = self.simulate_from_projected(@process, @dan, 19)
     new7 = sim[0]
     new8 = sim[1]
     @process.projected_wins = new7
     @dan.projected_wins = new8
 
-    sim = self.simulate_from_projected(@kevin, @theresa)
+    sim = self.simulate_from_projected(@kevin, @theresa, 19)
     new9 = sim[0]
     new10 = sim[1]
     @kevin.projected_wins = new9
     @theresa.projected_wins = new10
 
-    sim = self.simulate_from_projected(@vino, @gypsy)
+    sim = self.simulate_from_projected(@vino, @gypsy, 19)
     new11 = sim[0]
     new12 = sim[1]
     @vino.projected_wins = new11
@@ -470,37 +470,37 @@ class Challenger
   end
 
   def self.sim_week21
-    sim = self.simulate_from_projected(@miggy, @steve)
+    sim = self.simulate_from_projected(@miggy, @steve, 20)
     new1 = sim[0]
     new2 = sim[1]
     @miggy.projected_wins = new1
     @steve.projected_wins = new2
 
-    sim = self.simulate_from_projected(@jarjar, @vino)
+    sim = self.simulate_from_projected(@jarjar, @vino, 20)
     new3 = sim[0]
     new4 = sim[1]  
     @jarjar.projected_wins = new3
     @vino.projected_wins = new4
 
-    sim = self.simulate_from_projected(@backyard, @gypsy)
+    sim = self.simulate_from_projected(@backyard, @gypsy, 20)
     new5 = sim[0]
     new6 = sim[1]
     @backyard.projected_wins = new5
     @gypsy.projected_wins = new6
 
-    sim = self.simulate_from_projected(@process, @kevin)
+    sim = self.simulate_from_projected(@process, @kevin, 20)
     new7 = sim[0]
     new8 = sim[1]
     @process.projected_wins = new7
     @kevin.projected_wins = new8
 
-    sim = self.simulate_from_projected(@didi, @uncle)
+    sim = self.simulate_from_projected(@didi, @uncle, 20)
     new9 = sim[0]
     new10 = sim[1]
     @didi.projected_wins = new9
     @uncle.projected_wins = new10
 
-    sim = self.simulate_from_projected(@dan, @theresa)
+    sim = self.simulate_from_projected(@dan, @theresa, 20)
     new11 = sim[0]
     new12 = sim[1]
     @dan.projected_wins = new11
@@ -509,37 +509,37 @@ class Challenger
   end
 
   def self.sim_week22
-    sim = self.simulate_from_projected(@miggy, @didi)
+    sim = self.simulate_from_projected(@miggy, @didi, 21)
     new1 = sim[0]
     new2 = sim[1]
     @miggy.projected_wins = new1
     @didi.projected_wins = new2
 
-    sim = self.simulate_from_projected(@jarjar, @gypsy)
+    sim = self.simulate_from_projected(@jarjar, @gypsy, 21)
     new3 = sim[0]
     new4 = sim[1]  
     @jarjar.projected_wins = new3
     @gypsy.projected_wins = new4
 
-    sim = self.simulate_from_projected(@backyard, @vino)
+    sim = self.simulate_from_projected(@backyard, @vino, 21)
     new5 = sim[0]
     new6 = sim[1]
     @backyard.projected_wins = new5
     @vino.projected_wins = new6
 
-    sim = self.simulate_from_projected(@process, @theresa)
+    sim = self.simulate_from_projected(@process, @theresa, 21)
     new7 = sim[0]
     new8 = sim[1]
     @process.projected_wins = new7
     @theresa.projected_wins = new8
 
-    sim = self.simulate_from_projected(@kevin, @dan)
+    sim = self.simulate_from_projected(@kevin, @dan, 21)
     new9 = sim[0]
     new10 = sim[1]
     @kevin.projected_wins = new9
     @dan.projected_wins = new10
 
-    sim = self.simulate_from_projected(@steve, @uncle)
+    sim = self.simulate_from_projected(@steve, @uncle, 21)
     new11 = sim[0]
     new12 = sim[1]
     @steve.projected_wins = new11
@@ -547,19 +547,19 @@ class Challenger
 
   end
 
-  def self.simulate_from_projected(team1, team2)
+  def self.simulate_from_projected(team1, team2, weeks_completed)
     total_1 = team1.projected_wins
     total_2 = team2.projected_wins
 
-    team_record1 = total_1 / 10
-    team_record2 = total_2 / 10
+    team_record1 = total_1 / weeks_completed
+    team_record2 = total_2 / weeks_completed
 
     adjusted1 = (team_record1 - 6)
-    adjusted1 /= 10
+    adjusted1 /= 25
     adjusted1 += 6
 
     adjusted2 = (team_record2 - 6)
-    adjusted2 /= 10
+    adjusted2 /= 25
     adjusted2 += 6
 
     gen1 = Rubystats::NormalDistribution.new(adjusted1, 1)
@@ -597,15 +597,15 @@ class Challenger
     total_1 = team1.adjusted_wins
     total_2 = team2.adjusted_wins
 
-    team_record1 = total_1 / 10
-    team_record2 = total_2 / 10
+    team_record1 = total_1 / 11
+    team_record2 = total_2 / 11
 
     adjusted1 = (team_record1 - 6)
-    adjusted1 /= 10
+    adjusted1 /= 25
     adjusted1 += 6
 
     adjusted2 = (team_record2 - 6)
-    adjusted2 /= 10
+    adjusted2 /= 25
     adjusted2 += 6
 
     gen1 = Rubystats::NormalDistribution.new(adjusted1, 1)

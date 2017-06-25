@@ -41,21 +41,30 @@
   </div>
   <div class="one">
     <div class="onebox">
-      <span>Projected first round playoff matchups:</span><br>
-      <br>
+      <span><strong>Projected first round playoff matchups:</strong></span><br>
       <span><%= Leader.three_seed.name %> (3) vs. <%= Team.six_seed.name %> (6)</span><br>
       <span><%= Team.four_seed.name %> (4) vs. <%= Team.five_seed.name %> (5)</span><br>
       <br>
       <span><%= Leader.one_seed.name %> (1) - Bye</span><br>
       <span><%= Leader.two_seed.name %> (2) - Bye</span>
+      <br>
+      <br>
+      <span><strong>Estimated playoff odds as of 6/19:</strong></span> <br>
+      <span> Jar Jar Tartare: 100% </span> <br>
+      <span> Keep it n your pence: 99.83% </span> <br>
+      <span> Miggy Stardust: 99.36% </span> <br>
+      <span> Uncle Charlie: 99.18% </span> <br>
+      <span> Trust The Process: 97.56% </span> <br>
+      <span> Swipe Left: 40.23% </span> <br>
+      <span> Gypsy Danger: 36.68% </span> <br>
+      <span> Team Emoji: 19.22% </span> <br>
+      <span> Vino: 6.22% </span> <br>
+      <span> Sir Didi's Sleepers: 1.1% </span> <br>
+      <span> Backyards Loseagains: 0.61% </span> <br>
+      <span> SOS: 0.01% </span>
     </div>
   </div>
 </div>
 
 
 <% Challenger.simulate %>
-
-<% Challenger.sort_by_wins.each do |team| %>
-  <%= team.name %>
-  <%= team.projected_wins %> <br>
-<% end %>
