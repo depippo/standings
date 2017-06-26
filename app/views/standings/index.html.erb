@@ -17,36 +17,70 @@
       
       <tbody class="table-hover">
         <tr>
-        <% Team.sort_by_wins[0..1].each do |team| %>
-          <td class="text-left-highlight"><%= team.name %></td>
-          <td class="text-left-highlight"><%= team.record %></td>
-          <td class="text-left-highlight">+<%= team.games_ahead %></td>
-          <td class="text-left-highlight"><%= team.rank %></td>
+          <td class="text-left-highlight">Uncle Charlie</td>
+          <td class="text-left-highlight">77-60-7</td>
+          <td class="text-left-highlight">+10.5</td>
+          <td class="text-left-highlight">4</td>
         </tr>
-        <% end %>
-        <td class="text-left-highlight"><%= Team.sort_by_wins[2].name %></td>
-          <td class="text-left-highlight"><%= Team.sort_by_wins[2].record %></td>
-          <td class="text-left-highlight"> -- </td>
-          <td class="text-left-highlight"><%= Team.sort_by_wins[2].rank %></td>
+        <tr>
+          <td class="text-left-highlight">Trust The Process</td>
+          <td class="text-left-highlight">75-59-10</td>
+          <td class="text-left-highlight">+10.0</td>
+          <td class="text-left-highlight">5</td>
         </tr>
-        <% Team.sort_by_wins[3..8].each do |team| %>
-          <td class="text-left"><%= team.name %></td>
-          <td class="text-left"><%= team.record %></td>
-          <td class="text-left"><%= team.games_behind %></td>
+        <tr>
+          <td class="text-left-highlight">Swipe Left</td>
+          <td class="text-left-highlight">67-71-6</td>
+          <td class="text-left-highlight">--</td>
+          <td class="text-left-highlight">6</td>
+        </tr>
+        <tr>
+          <td class="text-left">Gypsy Danger</td>
+          <td class="text-left">62-73-9</td>
+          <td class="text-left">3.5</td>
           <td class="text-left"></td>
         </tr>
-        <% end %>
+        <tr>
+          <td class="text-left">Team Emoji</td>
+          <td class="text-left">59-76-9</td>
+          <td class="text-left">6.5</td>
+          <td class="text-left"></td>
+        </tr>
+        <tr>
+          <td class="text-left">Sir Didi's Sleepers</td>
+          <td class="text-left">58-80-6</td>
+          <td class="text-left">9.0</td>
+          <td class="text-left"></td>
+        </tr>
+        <tr>
+          <td class="text-left">Backyards Loseagains</td>
+          <td class="text-left">57-81-6</td>
+          <td class="text-left">10.0</td>
+          <td class="text-left"></td>
+        </tr>
+        <tr>
+          <td class="text-left">Vino</td>
+          <td class="text-left">57-82-5</td>
+          <td class="text-left">10.5</td>
+          <td class="text-left"></td>
+        </tr>
+        <tr>
+          <td class="text-left">SOS</td>
+          <td class="text-left">41-96-7</td>
+          <td class="text-left">25.5</td>
+          <td class="text-left"></td>
+        </tr>
       </tbody>
     </table>
   </div>
   <div class="one">
     <div class="onebox">
       <span><strong>Projected first round playoff matchups:</strong></span><br>
-      <span><%= Leader.three_seed.name %> (3) vs. <%= Team.six_seed.name %> (6)</span><br>
-      <span><%= Team.four_seed.name %> (4) vs. <%= Team.five_seed.name %> (5)</span><br>
+      <span>Miggy Stardust (3) vs. Swipe Left (6)</span><br>
+      <span>Uncle Charlie (4) vs. Trust The Process (5)</span><br>
       <br>
-      <span><%= Leader.one_seed.name %> (1) - Bye</span><br>
-      <span><%= Leader.two_seed.name %> (2) - Bye</span>
+      <span>Jar Jar Tartare (1) - Bye</span><br>
+      <span>Keep it n your pence (2) - Bye</span>
       <br>
       <br>
       <span><strong>Estimated playoff odds as of 6/26:</strong></span> <br>
@@ -65,5 +99,3 @@
     </div>
   </div>
 </div>
-
-<% Challenger.simulate %>
