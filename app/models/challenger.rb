@@ -6,73 +6,73 @@ class Challenger
     @jarjar = Challenger.new
     @jarjar.name = "Jar Jar Tartare"
     @jarjar.record =  "89-39-4"
-    @jarjar.power = 10.5
+    @jarjar.power = 10.58
     @challengers << @jarjar
 
     @gypsy = Challenger.new
     @gypsy.name = "Gypsy Danger"
     @gypsy.record =  "59-65-8"
-    @gypsy.power = 6.083
+    @gypsy.power = 5.83
     @challengers << @gypsy
 
     @vino = Challenger.new
     @vino.name = "Vino"
     @vino.record =  "55-72-5"
-    @vino.power = 4.416
+    @vino.power = 4.58
     @challengers << @vino
 
     @backyard = Challenger.new
     @backyard.name = "Backyards Loseagains"
     @backyard.record =  "49-78-5"
-    @backyard.power = 6.25
+    @backyard.power = 6.33
     @challengers << @backyard
 
     @miggy = Challenger.new
     @miggy.name = "Miggy Stardust"
     @miggy.record =  "74-52-6"
-    @miggy.power = 9.5
+    @miggy.power = 9.42
     @challengers << @miggy
 
     @uncle = Challenger.new
     @uncle.name = "Uncle Charlie"
     @uncle.record =  "73-53-6"
-    @uncle.power = 8
+    @uncle.power = 7.92
     @challengers << @uncle
 
     @didi = Challenger.new
     @didi.name = "Sir Didi's Sleepers"
     @didi.record =  "51-76-5"
-    @didi.power = 5.75
+    @didi.power = 5.67
     @challengers << @didi
 
     @steve = Challenger.new
     @steve.name = "SOS"
     @steve.record =  "40-85-7"
-    @steve.power = 2.75
+    @steve.power = 2.25
     @challengers << @steve
 
     @theresa = Challenger.new
     @theresa.name = "Keep it n your pence"
     @theresa.record =  "79-50-3"
-    @theresa.power = 9.083
+    @theresa.power = 9.33
     @challengers << @theresa
 
     @process = Challenger.new
     @process.name = "Trust The Process"
     @process.record =  "70-53-9"
-    @process.power = 6.083
+    @process.power = 6.25
     @challengers << @process
 
     @kevin = Challenger.new
     @kevin.name = "Swipe Left"
     @kevin.record =  "61-66-5"
-    @kevin.power = 5.33
+    @kevin.power = 5.67
     @challengers << @kevin
 
     @dan = Challenger.new
     @dan.name = "Team Emoji"
     @dan.record =  "56-67-9"
-    @dan.power = 4.25
+    @dan.power = 4.17
     @challengers << @dan
 
   def adjusted_wins
@@ -117,7 +117,7 @@ class Challenger
   end
 
   def self.run_simulation
-    self.sim_week12
+    # self.sim_week12
     self.sim_week13
     self.sim_week14
     self.sim_week15
@@ -170,37 +170,37 @@ class Challenger
   end
 
   def self.sim_week13
-    sim = self.simulate_from_projected(@miggy, @didi, 12)
+    sim = self.simulate_match(@miggy, @didi)
     new1 = sim[0]
     new2 = sim[1]
     @miggy.projected_wins = new1
     @didi.projected_wins = new2
 
-    sim = self.simulate_from_projected(@jarjar, @gypsy, 12)
+    sim = self.simulate_match(@jarjar, @gypsy)
     new3 = sim[0]
     new4 = sim[1]  
     @jarjar.projected_wins = new3
     @gypsy.projected_wins = new4
 
-    sim = self.simulate_from_projected(@backyard, @vino, 12)
+    sim = self.simulate_match(@backyard, @vino)
     new5 = sim[0]
     new6 = sim[1]
     @backyard.projected_wins = new5
     @vino.projected_wins = new6
 
-    sim = self.simulate_from_projected(@process, @theresa, 12)
+    sim = self.simulate_match(@process, @theresa)
     new7 = sim[0]
     new8 = sim[1]
     @process.projected_wins = new7
     @theresa.projected_wins = new8
 
-    sim = self.simulate_from_projected(@steve, @uncle, 12)
+    sim = self.simulate_match(@steve, @uncle)
     new9 = sim[0]
     new10 = sim[1]
     @steve.projected_wins = new9
     @uncle.projected_wins = new10
 
-    sim = self.simulate_from_projected(@dan, @kevin, 12)
+    sim = self.simulate_match(@dan, @kevin)
     new11 = sim[0]
     new12 = sim[1]
     @dan.projected_wins = new11
