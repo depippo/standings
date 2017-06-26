@@ -5,73 +5,73 @@ class Challenger
 
     @jarjar = Challenger.new
     @jarjar.name = "Jar Jar Tartare"
-    @jarjar.record =  "89-39-4"
+    @jarjar.record =  "99-41-4"
     @jarjar.power = 10.58
     @challengers << @jarjar
 
     @gypsy = Challenger.new
     @gypsy.name = "Gypsy Danger"
-    @gypsy.record =  "59-65-8"
+    @gypsy.record =  "62-73-9"
     @gypsy.power = 5.83
     @challengers << @gypsy
 
     @vino = Challenger.new
     @vino.name = "Vino"
-    @vino.record =  "55-72-5"
+    @vino.record =  "57-82-5"
     @vino.power = 4.58
     @challengers << @vino
 
     @backyard = Challenger.new
     @backyard.name = "Backyards Loseagains"
-    @backyard.record =  "49-78-5"
+    @backyard.record =  "57-81-6"
     @backyard.power = 6.33
     @challengers << @backyard
 
     @miggy = Challenger.new
     @miggy.name = "Miggy Stardust"
-    @miggy.record =  "74-52-6"
+    @miggy.record =  "85-53-6"
     @miggy.power = 9.42
     @challengers << @miggy
 
     @uncle = Challenger.new
     @uncle.name = "Uncle Charlie"
-    @uncle.record =  "73-53-6"
+    @uncle.record =  "77-60-7"
     @uncle.power = 7.92
     @challengers << @uncle
 
     @didi = Challenger.new
     @didi.name = "Sir Didi's Sleepers"
-    @didi.record =  "51-76-5"
+    @didi.record =  "58-80-6"
     @didi.power = 5.67
     @challengers << @didi
 
     @steve = Challenger.new
     @steve.name = "SOS"
-    @steve.record =  "40-85-7"
+    @steve.record =  "41-96-7"
     @steve.power = 2.25
     @challengers << @steve
 
     @theresa = Challenger.new
     @theresa.name = "Keep it n your pence"
-    @theresa.record =  "79-50-3"
+    @theresa.record =  "88-53-3"
     @theresa.power = 9.33
     @challengers << @theresa
 
     @process = Challenger.new
     @process.name = "Trust The Process"
-    @process.record =  "70-53-9"
+    @process.record =  "75-59-10"
     @process.power = 6.25
     @challengers << @process
 
     @kevin = Challenger.new
     @kevin.name = "Swipe Left"
-    @kevin.record =  "61-66-5"
+    @kevin.record =  "67-71-6"
     @kevin.power = 5.67
     @challengers << @kevin
 
     @dan = Challenger.new
     @dan.name = "Team Emoji"
-    @dan.record =  "56-67-9"
+    @dan.record =  "59-76-9"
     @dan.power = 4.17
     @challengers << @dan
 

@@ -216,15 +216,20 @@ dan   +1, +1, -2, -2, +1
 
 
 
-    puts jar        99.75
-    puts theresa    97.29
-    puts miggy      96.88
-    puts uncle      89.57
-    puts process    76.65
-    puts kevin      32.64
-    puts gypsy      44.76
-    puts dan        20.32
-    puts vino       11.75
-    puts didi       14.09
-    puts backyard   15.61
-    puts steve      0.69
+    puts jar        99.90
+    puts theresa    98.28
+    puts miggy      98.38
+    puts uncle      87.24
+    puts process    77.67
+    puts kevin      38.51
+    puts gypsy      35.64
+    puts dan        16.81
+    puts vino       10.10
+    puts didi       16.86
+    puts backyard   20.28
+    puts steve      0.33
+
+
+
+
+
