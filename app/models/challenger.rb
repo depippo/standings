@@ -1,66 +1,78 @@
 class Challenger
-  attr_accessor :id, :name, :record, :odds, :week, :adjusted_wins, :projected_wins
+  attr_accessor :id, :name, :record, :odds, :week, :adjusted_wins, :projected_wins, :power
 
     @challengers = []
 
     @jarjar = Challenger.new
     @jarjar.name = "Jar Jar Tartare"
     @jarjar.record =  "89-39-4"
+    @jarjar.power = 10.5
     @challengers << @jarjar
 
     @gypsy = Challenger.new
     @gypsy.name = "Gypsy Danger"
     @gypsy.record =  "59-65-8"
+    @gypsy.power = 6.083
     @challengers << @gypsy
 
     @vino = Challenger.new
     @vino.name = "Vino"
     @vino.record =  "55-72-5"
+    @vino.power = 4.416
     @challengers << @vino
 
     @backyard = Challenger.new
     @backyard.name = "Backyards Loseagains"
     @backyard.record =  "49-78-5"
+    @backyard.power = 6.25
     @challengers << @backyard
 
     @miggy = Challenger.new
     @miggy.name = "Miggy Stardust"
     @miggy.record =  "74-52-6"
+    @miggy.power = 9.5
     @challengers << @miggy
 
     @uncle = Challenger.new
     @uncle.name = "Uncle Charlie"
     @uncle.record =  "73-53-6"
+    @uncle.power = 8
     @challengers << @uncle
 
     @didi = Challenger.new
     @didi.name = "Sir Didi's Sleepers"
     @didi.record =  "51-76-5"
+    @didi.power = 5.75
     @challengers << @didi
 
     @steve = Challenger.new
     @steve.name = "SOS"
     @steve.record =  "40-85-7"
+    @steve.power = 2.75
     @challengers << @steve
 
     @theresa = Challenger.new
     @theresa.name = "Keep it n your pence"
     @theresa.record =  "79-50-3"
+    @theresa.power = 9.083
     @challengers << @theresa
 
     @process = Challenger.new
     @process.name = "Trust The Process"
     @process.record =  "70-53-9"
+    @process.power = 6.083
     @challengers << @process
 
     @kevin = Challenger.new
     @kevin.name = "Swipe Left"
     @kevin.record =  "61-66-5"
+    @kevin.power = 5.33
     @challengers << @kevin
 
     @dan = Challenger.new
     @dan.name = "Team Emoji"
     @dan.record =  "56-67-9"
+    @dan.power = 4.25
     @challengers << @dan
 
   def adjusted_wins
@@ -551,21 +563,29 @@ class Challenger
     total_1 = team1.projected_wins
     total_2 = team2.projected_wins
 
-    team_record1 = total_1 / weeks_completed
-    team_record2 = total_2 / weeks_completed
+    # team_record1 = total_1 / weeks_completed
+    # team_record2 = total_2 / weeks_completed
 
-    adjusted1 = (team_record1 - 6)
-    adjusted1 /= 10
+    # adjusted1 = (team_record1 - 6)
+    # adjusted1 /= 10
+    # adjusted1 += 6
+
+    # adjusted2 = (team_record2 - 6)
+    # adjusted2 /= 10
+    # adjusted2 += 6
+
+    adjusted1 = (team1.power - 6)
+    adjusted1 /= 2
     adjusted1 += 6
 
-    adjusted2 = (team_record2 - 6)
-    adjusted2 /= 10
+    adjusted2 = (team2.power - 6)
+    adjusted2 /= 2
     adjusted2 += 6
 
-    gen1 = Rubystats::NormalDistribution.new(adjusted1, 2)
+    gen1 = Rubystats::NormalDistribution.new(adjusted1, 4)
     team_score1 = gen1.rng               # a single random sample
 
-    gen2 = Rubystats::NormalDistribution.new(adjusted2, 2)
+    gen2 = Rubystats::NormalDistribution.new(adjusted2, 4)
     team_score2 = gen2.rng
 
     dif = team_score1 - team_score2
@@ -597,21 +617,31 @@ class Challenger
     total_1 = team1.adjusted_wins
     total_2 = team2.adjusted_wins
 
-    team_record1 = total_1 / 11
-    team_record2 = total_2 / 11
+    # team_record1 = total_1 / 11
+    # team_record2 = total_2 / 11
 
-    adjusted1 = (team_record1 - 6)
-    adjusted1 /= 10
+    # adjusted1 = (team_record1 - 6)
+    # adjusted1 /= 10
+    # adjusted1 += 6
+
+    # adjusted2 = (team_record2 - 6)
+    # adjusted2 /= 10
+    # adjusted2 += 6
+
+    adjusted1 = (team1.power - 6)
+    adjusted1 /= 2
     adjusted1 += 6
 
-    adjusted2 = (team_record2 - 6)
-    adjusted2 /= 10
+    adjusted2 = (team2.power - 6)
+    adjusted2 /= 2
     adjusted2 += 6
 
-    gen1 = Rubystats::NormalDistribution.new(adjusted1, 2)
+
+
+    gen1 = Rubystats::NormalDistribution.new(adjusted1, 4)
     team_score1 = gen1.rng               # a single random sample
 
-    gen2 = Rubystats::NormalDistribution.new(adjusted2, 2)
+    gen2 = Rubystats::NormalDistribution.new(adjusted2, 4)
     team_score2 = gen2.rng
 
     dif = team_score1 - team_score2

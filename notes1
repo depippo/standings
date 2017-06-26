@@ -1,0 +1,177 @@
+theresa     12
+backyard    11
+jarjar      10
+miggy       9
+uncle       8
+gypsy       7
+process     6
+didi        5
+kevin       4
+sos         3
+vino        2
+dan         1
+
+theresa     12
+miggy       11
+jarjar      10
+uncle       9
+kevin       8
+gypsy       7
+process     6
+sos         5
+didi        4
+vino        3
+backyard    2
+dan         1
+
+theresa     12  
+miggy       11
+didi        10
+process     9
+jarjar      8
+vino        7
+gypsy       6
+uncle       5
+backyard    4
+sos         3
+kevin       2
+dan         1
+
+jarjar      12
+uncle       11
+backyard    10
+kevin       9
+process     8
+theresa     7
+dan         6
+gypsy       5
+vino        4
+miggy       3
+didi        2
+sos         1
+
+theresa     12
+backyard    11
+jarjar      10
+vino        9
+miggy       8
+process     7
+dan         6
+uncle       5
+didi        4
+kevin       3
+sos         2
+gypsy       1
+
+jarjar      12
+theresa     11
+miggy       10
+uncle       9
+backyard    8
+kevin       7
+vino        6
+sos         5
+process     4
+didi        3
+gypsy       2
+dan         1
+
+
+
+pitching
+
+jarjar      12
+miggy       11
+didi        10
+gypsy       9
+kevin       8
+backyard    7
+theresa     6
+sos         5
+process     4
+dan         3
+vino        2
+uncle       1
+
+miggy       12
+jarjar      11
+didi        10
+process     9
+kevin       8
+gypsy       7
+theresa     6
+backyard    5
+dan         4
+vino        3
+sos         2
+uncle       1
+
+uncle       12
+jarjar      11
+miggy       10
+theresa     9
+gypsy       8
+kevin       7
+didi        6
+dan         5
+backyard    4
+process     3
+vino        2
+sos         1
+
+jarjar      12
+uncle       11
+miggy       10
+theresa     9
+gypsy       8
+dan         7
+backyard    6
+kevin       5
+didi        4
+process     3
+vino        2
+sos         1
+
+uncle       12
+miggy       11
+gypsy       10
+theresa     9
+jarjar      8
+process     7
+didi        6
+dan         5
+vino        4
+sos         3
+kevin       2
+backyard    1
+
+uncle       12
+dan         11
+jarjar      10
+vino        9
+miggy       8
+process     7
+backyard    6
+didi        5
+theresa     4
+gypsy       3
+sos         2
+kevin       1
+
+theresa: 9.083
+backyard: 6.25
+jarjar: 10.5
+miggy: 9.5
+uncle: 8
+gypsy: 6.083
+process: 6.083
+didi: 5.75
+kevin: 5.33
+sos: 2.75
+vino: 4.4166
+dan: 4.25
+
+
+
+
+
