@@ -5,74 +5,74 @@ class Challenger
 
     @jarjar = Challenger.new
     @jarjar.name = "Jar Jar Tartare"
-    @jarjar.record =  "99-41-4"
-    @jarjar.power = 10.58
+    @jarjar.record =  "100-51-5"
+    @jarjar.power = 10.583
     @challengers << @jarjar
 
     @gypsy = Challenger.new
     @gypsy.name = "Gypsy Danger"
-    @gypsy.record =  "62-73-9"
-    @gypsy.power = 5.83
+    @gypsy.record =  "72-74-10"
+    @gypsy.power = 6.67
     @challengers << @gypsy
 
     @vino = Challenger.new
     @vino.name = "Vino"
-    @vino.record =  "57-82-5"
-    @vino.power = 4.58
+    @vino.record =  "61-90-5"
+    @vino.power = 4.583
     @challengers << @vino
 
     @backyard = Challenger.new
     @backyard.name = "Backyards Loseagains"
-    @backyard.record =  "57-81-6"
-    @backyard.power = 6.33
+    @backyard.record =  "65-85-6"
+    @backyard.power = 6
     @challengers << @backyard
 
     @miggy = Challenger.new
     @miggy.name = "Miggy Stardust"
-    @miggy.record =  "85-53-6"
-    @miggy.power = 9.42
+    @miggy.record =  "89-58-9"
+    @miggy.power = 9.5
     @challengers << @miggy
 
     @uncle = Challenger.new
     @uncle.name = "Uncle Charlie"
-    @uncle.record =  "77-60-7"
-    @uncle.power = 7.92
+    @uncle.record =  "80-68-8"
+    @uncle.power = 7.75
     @challengers << @uncle
 
     @didi = Challenger.new
     @didi.name = "Sir Didi's Sleepers"
-    @didi.record =  "58-80-6"
-    @didi.power = 5.67
+    @didi.record =  "63-84-9"
+    @didi.power = 5.4167
     @challengers << @didi
 
     @steve = Challenger.new
     @steve.name = "SOS"
-    @steve.record =  "41-96-7"
-    @steve.power = 2.25
+    @steve.record =  "49-99-8"
+    @steve.power = 2.83
     @challengers << @steve
 
     @theresa = Challenger.new
     @theresa.name = "Keep it n your pence"
-    @theresa.record =  "88-53-3"
-    @theresa.power = 9.33
+    @theresa.record =  "96-57-3"
+    @theresa.power = 9.416
     @challengers << @theresa
 
     @process = Challenger.new
     @process.name = "Trust The Process"
-    @process.record =  "75-59-10"
-    @process.power = 6.25
+    @process.record =  "79-67-10"
+    @process.power = 5.33
     @challengers << @process
 
     @kevin = Challenger.new
     @kevin.name = "Swipe Left"
-    @kevin.record =  "67-71-6"
-    @kevin.power = 5.67
+    @kevin.record =  "77-73-6"
+    @kevin.power = 5.583
     @challengers << @kevin
 
     @dan = Challenger.new
     @dan.name = "Team Emoji"
-    @dan.record =  "59-76-9"
-    @dan.power = 4.17
+    @dan.record =  "61-86-9"
+    @dan.power = 4.33
     @challengers << @dan
 
   def adjusted_wins
@@ -118,7 +118,7 @@ class Challenger
 
   def self.run_simulation
     # self.sim_week12
-    self.sim_week13
+    # self.sim_week13
     self.sim_week14
     self.sim_week15
     self.sim_week16
@@ -209,37 +209,37 @@ class Challenger
   end
 
   def self.sim_week14
-    sim = self.simulate_from_projected(@miggy, @uncle, 13)
+    sim = self.simulate_match(@miggy, @uncle)
     new1 = sim[0]
     new2 = sim[1]
     @miggy.projected_wins = new1
     @uncle.projected_wins = new2
 
-    sim = self.simulate_from_projected(@jarjar, @backyard, 13)
+    sim = self.simulate_match(@jarjar, @backyard)
     new3 = sim[0]
     new4 = sim[1]  
     @jarjar.projected_wins = new3
     @backyard.projected_wins = new4
 
-    sim = self.simulate_from_projected(@gypsy, @vino, 13)
+    sim = self.simulate_match(@gypsy, @vino)
     new5 = sim[0]
     new6 = sim[1]
     @gypsy.projected_wins = new5
     @vino.projected_wins = new6
 
-    sim = self.simulate_from_projected(@process, @dan, 13)
+    sim = self.simulate_match(@process, @dan)
     new7 = sim[0]
     new8 = sim[1]
     @process.projected_wins = new7
     @dan.projected_wins = new8
 
-    sim = self.simulate_from_projected(@steve, @didi, 13)
+    sim = self.simulate_match(@steve, @didi)
     new9 = sim[0]
     new10 = sim[1]
     @steve.projected_wins = new9
     @didi.projected_wins = new10
 
-    sim = self.simulate_from_projected(@theresa, @kevin, 13)
+    sim = self.simulate_match(@theresa, @kevin)
     new11 = sim[0]
     new12 = sim[1]
     @theresa.projected_wins = new11
