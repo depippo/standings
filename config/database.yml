@@ -27,7 +27,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: f3_development
+  database: johndepippo
   pool: 5
   username: f3
   password:
