@@ -5,6 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-ymoncada = Player.create!(:name => "Yoan Moncada")
-kallard = Player.create!(:name => "Kolby Allard")

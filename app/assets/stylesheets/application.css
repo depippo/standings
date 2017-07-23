@@ -40,6 +40,11 @@ div.table-title {
 
 }
 
+.container {
+  background-color: white;
+  padding: 10px;
+}
+
 .table-title h3 {
    color: white;
    font-size: 37px;
