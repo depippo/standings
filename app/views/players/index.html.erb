@@ -1,0 +1,9 @@
+<div class="container">
+  <% @players.each do |player| %>
+   <h1> <%= player.name %> </h1>
+  <%= link_to 'Delete', player_path(player), method: :delete %>
+  <% end %>
+
+
+  <h4>  <%= link_to "Add a player", new_player_path %> </h4>
+</div>

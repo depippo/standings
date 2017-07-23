@@ -3,12 +3,12 @@ backyard    11
 jarjar      10
 miggy       9
 uncle       8
-gypsy       7
-process     6
+gypsy       7     6
+process     6     7
 didi        5
-kevin       4
-sos         3
-vino        2
+kevin       4     3
+sos         3     2
+vino        2     4
 dan         1
 
 theresa     12
@@ -17,9 +17,9 @@ jarjar      10
 uncle       9
 kevin       8
 gypsy       7
-process     6
-sos         5
-didi        4
+process     6     5
+sos         5     4
+didi        4     6
 vino        3
 backyard    2
 dan         1
@@ -30,11 +30,11 @@ didi        10
 process     9
 jarjar      8
 vino        7
-gypsy       6
-uncle       5
-backyard    4
-sos         3
-kevin       2
+gypsy       6     5
+uncle       5     4
+backyard    4     6
+sos         3     2
+kevin       2     3
 dan         1
 
 jarjar      12
@@ -51,30 +51,30 @@ didi        2
 sos         1
 
 theresa     12
-backyard    11
-jarjar      10
+backyard    11    10
+jarjar      10    11
 vino        9
 miggy       8
-process     7
-dan         6
-uncle       5
-didi        4
-kevin       3
+process     7     6
+dan         6     7
+uncle       5     4
+didi        4     3
+kevin       3     5
 sos         2
 gypsy       1
 
-jarjar      12
-theresa     11
+jarjar      12    11
+theresa     11    12
 miggy       10
 uncle       9
 backyard    8
 kevin       7
 vino        6
-sos         5
-process     4
+sos         5     4
+process     4     5
 didi        3
-gypsy       2
-dan         1
+gypsy       2     1
+dan         1     2
 
 
 
@@ -88,17 +88,17 @@ kevin       8
 backyard    7
 theresa     6
 sos         5
-process     4
-dan         3
-vino        2
-uncle       1
+process     4     2
+dan         3     1
+vino        2     4
+uncle       1     3
 
 miggy       12
 jarjar      11
 didi        10
 process     9
-kevin       8
-gypsy       7
+kevin       8     7
+gypsy       7     8
 theresa     6
 backyard    5
 dan         4
@@ -106,16 +106,16 @@ vino        3
 sos         2
 uncle       1
 
-uncle       12
-jarjar      11
+uncle       12    11
+jarjar      11    12
 miggy       10
 theresa     9
 gypsy       8
 kevin       7
 didi        6
-dan         5
+dan         5     3
 backyard    4
-process     3
+process     3     5
 vino        2
 sos         1
 
@@ -134,29 +134,29 @@ sos         1
 
 uncle       12
 miggy       11
-gypsy       10
-theresa     9
+gypsy       10    9
+theresa     9     10
 jarjar      8
-process     7
-didi        6
-dan         5
-vino        4
-sos         3
-kevin       2
+process     7 
+didi        6     5
+dan         5     6
+vino        4     3
+sos         3     2
+kevin       2     4
 backyard    1
 
 uncle       12
 dan         11
 jarjar      10
-vino        9
-miggy       8
-process     7
+vino        9     8
+miggy       8     7
+process     7     9
 backyard    6
-didi        5
-theresa     4
+didi        5     4
+theresa     4     5
 gypsy       3
-sos         2
-kevin       1
+sos         2     1
+kevin       1     2
 
 theresa: 9.083
 backyard: 6.25
