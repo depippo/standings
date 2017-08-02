@@ -1,8 +1,6 @@
-
 <div class="table-title">
   <h3>2017 WILD CARD STANDINGS</h3>
 </div>
-
 
 <div class="wrap">
   <div class="two">
@@ -18,58 +16,89 @@
       
       <tbody class="table-hover">
         <tr>
-        <% Team.sort_by_wins[0..1].each do |team| %>
-          <td class="text-left-highlight"><%= team.name %></td>
-          <td class="text-left-highlight"><%= team.record %></td>
-          <td class="text-left-highlight">+<%= team.games_ahead %></td>
-          <td class="text-left-highlight"><%= team.rank %></td>
+          <td class="text-left-highlight">Miggy Stardust</td>
+          <td class="text-left-highlight">101-81-10</td>
+          <td class="text-left-highlight">+7.0</td>
+          <td class="text-left-highlight">4</td>
         </tr>
-        <% end %>
-        <td class="text-left-highlight"><%= Team.sort_by_wins[2].name %></td>
-          <td class="text-left-highlight"><%= Team.sort_by_wins[2].record %></td>
-          <td class="text-left-highlight"> -- </td>
-          <td class="text-left-highlight"><%= Team.sort_by_wins[2].rank %></td>
+        <tr>
+          <td class="text-left-highlight">Robbie's Rays</td>
+          <td class="text-left-highlight">98-84-10</td>
+          <td class="text-left-highlight">+4.0</td>
+          <td class="text-left-highlight">5</td>
         </tr>
-        <% Team.sort_by_wins[3..8].each do |team| %>
-          <td class="text-left"><%= team.name %></td>
-          <td class="text-left"><%= team.record %></td>
-          <td class="text-left"><%= team.games_behind %></td>
+        <tr>
+          <td class="text-left-highlight">Gypsy Danger</td>
+          <td class="text-left-highlight">94-88-10</td>
+          <td class="text-left-highlight">--</td>
+          <td class="text-left-highlight">6</td>
+        </tr>
+        <tr>
+          <td class="text-left">Mookie Monster</td>
+          <td class="text-left">84-100-8</td>
+          <td class="text-left">11.0</td>
           <td class="text-left"></td>
         </tr>
-        <% end %>
+       <tr>
+          <td class="text-left">Sir Didi's Sleepers</td>
+          <td class="text-left">79-102-11</td>
+          <td class="text-left">14.5</td>
+          <td class="text-left"></td>
+        </tr>
+        <tr>
+          <td class="text-left">Vino</td>
+          <td class="text-left">80-107-5</td>
+          <td class="text-left">16.5</td>
+          <td class="text-left"></td>
+        </tr>
+        <tr>
+          <td class="text-left">Backyards Loseagains</td>
+          <td class="text-left">78-107-7</td>
+          <td class="text-left">17.5</td>
+          <td class="text-left"></td>
+        </tr>
+        <tr>
+          <td class="text-left">Homecoming</td>
+          <td class="text-left">69-115-8</td>
+          <td class="text-left">26.0</td>
+          <td class="text-left"></td>
+        </tr>
+        <tr>
+          <td class="text-left">Goku-san</td>
+          <td class="text-left">67-116-9</td>
+          <td class="text-left">27.5</td>
+          <td class="text-left"></td>
+        </tr>
       </tbody>
     </table>
   </div>
   <div class="one">
     <div class="onebox">
       <span><strong>Projected first round playoff matchups:</strong></span><br>
-      <span><%= Leader.three_seed.name %> (3) vs. <%= Team.six_seed.name %> (6)</span><br>
-      <span><%= Team.four_seed.name %> (4) vs. <%= Team.five_seed.name %> (5)</span><br>
+      <span>Uncle Charlie (3) vs. Gypsy Danger (6)</span><br>
+      <span>Miggy Stardust (4) vs. Robbie's Rays (5)</span><br>
       <br>
-      <span><%= Leader.one_seed.name %> (1) - Bye</span><br>
-      <span><%= Leader.two_seed.name %> (2) - Bye</span>
+      <span>Jar Jar Tartare (1) - Bye</span><br>
+      <span>Keep it n your pence (2) - Bye</span>
       <br>
       <br>
-      <span><strong>Estimated playoff odds as of 7/10:</strong></span> <br>
-      <span> Jar Jar Tartare: 99.79% (+0.14%)</span> <br>
-      <span> Keep it n your pence: 99.67% (+0.78%)</span> <br>
-      <span> Miggy Stardust: 97.88% (-0.11%)</span> <br>
-      <span> Robbie's Rays: 82.87% (+16.13%)</span> <br>
-      <span> Uncle Charlie: 79.04% (+0.54%)</span> <br>
-      <span> Gypsy Danger: 74.77% (+14.53%)</span> <br>
-      <span> Mookie Monster: 32.33% (-13.27%)</span> <br>
-      <span> Backyards Loseagains: 15.50% (-2.56%)</span> <br>
-      <span> Sir Didi's Sleepers: 11.86% (-4.21%)</span> <br>
-      <span> Goku-san: 2.74% </span> (-8.26%)<br>
-      <span> Vino: 2.74% (-3.77%)</span> <br>
-      <span> Homecoming: 0.81% (+0.06%)</span>
+      <span><strong>Estimated playoff odds as of 7/31:</strong></span> <br>
+      <span> Jar Jar Tartare: 99.98% (+0.05%)</span> <br>
+      <span> Keep it n your pence: 99.93% (-0.04%)</span> <br>
+      <span> Miggy Stardust: 97.96% (+0.08%)</span> <br>
+      <span> Uncle Charlie: 96.89% (+7.1%)</span> <br>
+      <span> Gypsy Danger: 84.90% (+2.96%)</span> <br>
+      <span> Robbie's Rays: 73.97% (-6.04%)</span> <br>
+      <span> Mookie Monster: 20.34% (-10.95%)</span> <br>
+      <span> Sir Didi's Sleepers: 10.95% (+5.38%)</span> <br>
+      <span> Backyards Loseagains: 8.59% (-0.76%)</span> <br>
+      <span> Vino: 4.74% (+2.04%)</span> <br>
+      <span> Homecoming: 1.23% (-0.11%)</span>
+      <span> Goku-san: 0.52% (-0.98%)</span><br>
     </div>
+-1.27
   </div>
 </div>
-
-<% Challenger.simulate %>
-
-
 
 
 
